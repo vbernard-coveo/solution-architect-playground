@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Solution Architect Playground</title>
+    <meta name="description" content="Solution Architect Playground">
+    <meta name="author" content="Solution Architect Playground">
+    <link rel="icon" href="https://www.coveo.com/public/img/favicon.png?v=1.0.82" sizes="64x64" />
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.10084/css/CoveoFullSearch.css" />
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <script class="coveo-script"
+        src="https://static.cloud.coveo.com/searchui/v2.10084/js/CoveoJsSearch.Lazy.js"></script>
+</head>
+
+<body>
+    <header w3-include-html="partials/navbar.html"></header>
+    <div class="container" w3-include-html="pages/search.html"></div>
+    <footer w3-include-html="partials/footer.html"></footer>
+</body>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        initialize();
+        Coveo.SearchEndpoint.configureCloudV2Endpoint("solutionarchitectplayground3q4xy189", "xx722c92ec-2963-437a-bd98-8d67da8b507d");
+        setTimeout(function(){ 
+            Coveo.init(document.querySelector("#search"));
+         }, 100);
+    })
+</script>
+
+</html>
