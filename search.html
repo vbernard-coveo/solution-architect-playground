@@ -18,6 +18,8 @@
         crossorigin="anonymous"></script>
     <script class="coveo-script"
         src="https://static.cloud.coveo.com/searchui/v2.10084/js/CoveoJsSearch.Lazy.js"></script>
+    <script type="text/javascript" src="https://static.cloud.coveo.com/coveo.analytics.js/coveoua.js">
+    </script>
 </head>
 
 <body>
@@ -31,9 +33,9 @@
     document.addEventListener('DOMContentLoaded', function () {
         initialize();
         Coveo.SearchEndpoint.configureCloudV2Endpoint("solutionarchitectplayground3q4xy189", "xx722c92ec-2963-437a-bd98-8d67da8b507d");
-        setTimeout(function(){ 
+        setTimeout(function () {
             Coveo.init(document.querySelector("#search"));
-         }, 100);
+        }, 200);
     })
 </script>
 
