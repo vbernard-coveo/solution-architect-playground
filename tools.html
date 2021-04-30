@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home - Solution Architect Playground</title>
+    <title>Tools - Solution Architect Playground</title>
     <meta name="description" content="Solution Architect Playground">
     <meta name="author" content="Solution Architect Playground">
     <link rel="icon" href="https://www.coveo.com/public/img/favicon.png?v=1.0.82" sizes="64x64" />
@@ -25,12 +25,14 @@
 
 <body>
     <header w3-include-html="partials/navbar.html"></header>
-    <div class="container" w3-include-html="pages/home.html"></div>
+    <div class="container" w3-include-html="pages/tools.html"></div>
     <footer w3-include-html="partials/footer.html" class="footer mt-auto py-3 bg-dark"></footer>
 </body>
 
 <script>
-    initialize();
+    document.addEventListener('DOMContentLoaded', function () {
+        initialize();
+    });
 </script>
 
 </html>
