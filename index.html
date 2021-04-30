@@ -21,6 +21,15 @@
         src="https://static.cloud.coveo.com/searchui/v2.10084/js/CoveoJsSearch.Lazy.js"></script>
     <script type="text/javascript" src="https://static.cloud.coveo.com/coveo.analytics.js/coveoua.js">
     </script>
+    <script>
+        // Send view events.
+        coveoua("init", "xx722c92ec-2963-437a-bd98-8d67da8b507d");
+        coveoua("send", "pageview", {
+            contentIdKey: "uri",
+            contentIdValue: document.location.href,
+            contentType: "Web Page"
+        });
+    </script>
 </head>
 
 <body class="d-flex flex-column h-100">
