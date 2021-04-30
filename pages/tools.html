@@ -66,3 +66,21 @@
     </div>
   </div>
 </div>
+
+<div class="row">
+  <!-- Configure the recommendation interface in the page markup -->
+  <div id="recommendation"
+       class="CoveoRecommendation"
+       data-results-per-page="4">
+    <div class="CoveoAnalytics" data-search-hub="playground-recommendations"></div>
+    <div class="coveo-recommendation-header">
+      <div class="coveo-recommendation-title">Recommended for you</div>
+    </div>
+    <div class="coveo-recommendation-body">
+      <div class="CoveoResultList" data-layout="card" data-wait-animation="fade"
+        data-auto-select-fields-to-include="false" w3-include-html="../result-template/card.html">
+      </div>
+    </div>
+  </div>
+
+</div>
