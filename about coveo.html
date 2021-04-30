@@ -39,7 +39,15 @@
 </body>
 
 <script>
-    initialize();
+    document.addEventListener('DOMContentLoaded', function () {
+        initialize();
+        // Configure a search endpoint for the recommendation interface.
+        Coveo.SearchEndpoint.configureCloudV2Endpoint("solutionarchitectplayground3q4xy189", "xx722c92ec-2963-437a-bd98-8d67da8b507d");
+        // Initialize the recommendation interface.
+        setTimeout(function () {
+            Coveo.initRecommendation(document.querySelector("#recommendation"));
+        }, 400);
+    });
 </script>
 
 </html>
