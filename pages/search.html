@@ -1,40 +1,43 @@
 <div id="search" class="CoveoSearchInterface" data-enable-history="true">
-    <div class="CoveoAnalytics" data-search-hub="solution-architect-playground"></div>
-    <div class="coveo-search-section">
-      <div class="CoveoSearchbox" data-enable-omnibox="true"></div>
+  <div class="CoveoAnalytics" data-search-hub="solution-architect-playground"></div>
+  <div class="coveo-search-section">
+    <div class="CoveoSearchbox" data-enable-omnibox="true"></div>
+  </div>
+  <div class="coveo-main-section">
+    <div class="coveo-facet-column">
+      <div class="CoveoDynamicFacetManager">
+      <div class="CoveoDynamicFacet" data-title="Type" data-field="@objecttype"></div>
+      <div class="CoveoDynamicFacet" data-title="Year" data-field="@year"></div>
+      <div class="CoveoDynamicFacet" data-title="Month" data-field="@month"></div>
     </div>
-    <div class="coveo-main-section">
-      <div class="coveo-facet-column">
-        <div class="CoveoDynamicFacet" data-title="Type" data-field="@objecttype" data-tab="All"></div>
-        <div class="CoveoDynamicFacet" data-title="FileType" data-field="@filetype" data-tab="All"></div>
-        <div class="CoveoDynamicFacet" data-title="Author" data-field="@author" data-tab="All"></div>
+  </div>
+  <div class="coveo-results-column">
+    <div class="CoveoShareQuery"></div>
+    <div class="CoveoPreferencesPanel">
+      <div class="CoveoResultsPreferences"></div>
+      <div class="CoveoResultsFiltersPreferences"></div>
+    </div>
+    <div class="CoveoTriggers"></div>
+    <div class="CoveoBreadcrumb"></div>
+    <div class="CoveoDidYouMean"></div>
+    <div class="coveo-results-header">
+      <div class="coveo-summary-section">
+        <span class="CoveoQuerySummary"></span>
+        <span class="CoveoQueryDuration"></span>
       </div>
-      <div class="coveo-results-column">
-        <div class="CoveoShareQuery"></div>
-        <div class="CoveoPreferencesPanel">
-          <div class="CoveoResultsPreferences"></div>
-          <div class="CoveoResultsFiltersPreferences"></div>
-        </div>
-        <div class="CoveoTriggers"></div>
-        <div class="CoveoBreadcrumb"></div>
-        <div class="CoveoDidYouMean"></div>
-        <div class="coveo-results-header">
-          <div class="coveo-summary-section">
-            <span class="CoveoQuerySummary"></span>
-            <span class="CoveoQueryDuration"></span>
-          </div>
-          <div class="coveo-result-layout-section">
-            <span class="CoveoResultLayout"></span>
-          </div>
-          <div class="coveo-sort-section">
-            <span class="CoveoSort" data-sort-criteria="relevancy" data-caption="Relevance"></span>
-            <span class="CoveoSort" data-sort-criteria="date descending,date ascending" data-caption="Date"></span>
-          </div>
-        </div>
-        <div class="CoveoHiddenQuery"></div>
-        <div class="CoveoErrorReport" data-pop-up="false"></div>
-        <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true">
-          <script id="Default" class="result-template" type="text/html" data-layout="list">
+      <div class="coveo-result-layout-section">
+        <span class="CoveoResultLayout"></span>
+      </div>
+      <div class="coveo-sort-section">
+        <span class="CoveoSort" data-sort-criteria="relevancy" data-caption="Relevance"></span>
+        <span class="CoveoSort" data-sort-criteria="date descending,date ascending" data-caption="Date"></span>
+      </div>
+    </div>
+    <div class="CoveoHiddenQuery"></div>
+    <div class="CoveoErrorReport" data-pop-up="false"></div>
+    <div class="CoveoResultList" data-layout="list" data-wait-animation="fade"
+      data-auto-select-fields-to-include="true">
+      <script id="Default" class="result-template" type="text/html" data-layout="list">
             <div class="coveo-result-frame">
               <div class="coveo-result-cell" style="vertical-align:top;text-align:center;width:32px;">
                 <span class="CoveoIcon" data-small="true" data-with-label="false"></span>
@@ -77,9 +80,9 @@
               </div>
             </div>
           </script>
-        </div>
-        <div class="CoveoPager"></div>
-        <div class="CoveoLogo"></div>
-      </div>
     </div>
+    <div class="CoveoPager"></div>
+    <div class="CoveoLogo"></div>
   </div>
+</div>
+</div>
