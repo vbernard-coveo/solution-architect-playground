@@ -1,24 +1,53 @@
 <div class="row">
-Atomic
+  <atomic-search-interface>
+    <atomic-search-box></atomic-search-box>
+    <div class="col-md-3">
+      <atomic-facet-manager>
+        <atomic-facet field="author" label="Authors"></atomic-facet>
+      </atomic-facet-manager>
+    </div>
+    
+    <div class="col-md-8">
+
+      <atomic-result-list fields-to-include="filetype">
+        <atomic-result-template id="demoTemplate">
+          <template>
+            <div id="title">
+              <a href="{{clickUri}}">
+                <h3>{{title}}</h3>
+              </a>
+            </div>
+            <div>
+              <atomic-result-value value="excerpt"></atomic-result-value>
+            </div>
+            <div id="type">
+              <atomic-result-value value="filetype"></atomic-result-value>
+            </div>
+          </template>
+        </atomic-result-template>
+      </atomic-result-list>
+    </div>
+
+  </atomic-search-interface>
 </div>
-  
-  <div class="row">
-    <!-- Configure the recommendation interface in the page markup -->
-    <div id="recommendation" class="CoveoRecommendation" data-results-per-page="4">
-      <script class="CoveoPipelineContext" type="text/x-context">
+
+<div class="row">
+  <!-- Configure the recommendation interface in the page markup -->
+  <div id="recommendation" class="CoveoRecommendation" data-results-per-page="4">
+    <script class="CoveoPipelineContext" type="text/x-context">
           {
               "user_role" : "Cat Lover"
           }
       </script>
-      <div class="CoveoAnalytics" data-search-hub="playground-recommendations"></div>
-      <div class="coveo-recommendation-header">
-        <div class="coveo-recommendation-title">Recommended for you</div>
-      </div>
-      <div class="coveo-recommendation-body">
-        <div class="CoveoResultList" data-layout="card" data-wait-animation="fade"
-          data-auto-select-fields-to-include="false" w3-include-html="../result-template/card.html">
-        </div>
+    <div class="CoveoAnalytics" data-search-hub="playground-recommendations"></div>
+    <div class="coveo-recommendation-header">
+      <div class="coveo-recommendation-title">Recommended for you</div>
+    </div>
+    <div class="coveo-recommendation-body">
+      <div class="CoveoResultList" data-layout="card" data-wait-animation="fade"
+        data-auto-select-fields-to-include="false" w3-include-html="../result-template/card.html">
       </div>
     </div>
-  
   </div>
+
+</div>
