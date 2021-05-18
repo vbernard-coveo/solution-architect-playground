@@ -45,44 +45,24 @@
 <body class="d-flex flex-column h-100">
     <header w3-include-html="partials/navbar.html"></header>
     <div class="container" w3-include-html="pages/atomic.html"></div>
-
-    <div class="row">
-        <atomic-search-interface>
-          <atomic-search-box></atomic-search-box>
-          <atomic-facet-manager>
-            <atomic-facet field="author" label="Authors"></atomic-facet>
-          </atomic-facet-manager>
-        </atomic-search-interface>
-      </div>
-
     <footer w3-include-html="partials/footer.html" class="footer mt-auto py-3 bg-dark"></footer>
 </body>
 
-  <script>
+<script>
 
     document.addEventListener('DOMContentLoaded', function () {
         initialize();
-
-        (async () => {
-            await customElements.whenDefined('atomic-search-interface');
-            const searchInterface = document.querySelector('atomic-search-interface');
-            await searchInterface.initialize({
-                accessToken: 'xx722c92ec-2963-437a-bd98-8d67da8b507d',
-                organizationId: 'solutionarchitectplayground3q4xy189'
-            });
-            searchInterface.executeFirstSearch();
-        })();
-
+        setTimeout(function () {
+            (async () => {
+                await customElements.whenDefined('atomic-search-interface');
+                const searchInterface = document.querySelector('atomic-search-interface');
+                await searchInterface.initialize({
+                    accessToken: 'xx722c92ec-2963-437a-bd98-8d67da8b507d',
+                    organizationId: 'solutionarchitectplayground3q4xy189'
+                });
+                searchInterface.executeFirstSearch();
+            })();
+        }, 400);
     })
 </script>
-
-<style>
-    atomic-facet-manager {
-      padding-top: 13px;
-    }
-    atomic-result-list {
-      display: block;
-      margin-top: 10px;
-    }
-  </style>
 </html>
