@@ -1,35 +1,69 @@
 <div class="row">
   <atomic-search-interface>
     <atomic-search-box></atomic-search-box>
-    <div class="col-md-3">
+    <div class="interface-container">
       <atomic-facet-manager>
         <atomic-facet field="author" label="Authors"></atomic-facet>
       </atomic-facet-manager>
-    </div>
-    
-    <div class="col-md-8">
 
       <atomic-result-list fields-to-include="filetype">
         <atomic-result-template id="demoTemplate">
           <template>
+            <style>
+              h3 {
+                color: blue;
+              }
+            </style>
             <div id="title">
               <a href="{{clickUri}}">
                 <h3>{{title}}</h3>
               </a>
             </div>
             <div>
-              <atomic-result-value value="excerpt"></atomic-result-value>
+              <atomic-result-value value="excerpt">{{excerpt}}</atomic-result-value>
             </div>
             <div id="type">
-              <atomic-result-value value="filetype"></atomic-result-value>
+              <atomic-result-value value="filetype">{{raw.filetype}}</atomic-result-value>
             </div>
           </template>
         </atomic-result-template>
       </atomic-result-list>
+    <div class="footer-item">
+      <atomic-pager></atomic-pager>
+      <atomic-results-per-page></atomic-results-per-page>
     </div>
-
+  </div>
   </atomic-search-interface>
 </div>
+
+<style>
+  atomic-facet-manager {
+    padding-top: 13px;
+  }
+  atomic-result-list {
+    display: block;
+    margin-top: 10px;
+  }
+</style>
+
+<style>
+  .interface-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    gap: 20px;
+  }
+  .search-box-item {
+    grid-column-start: 2;
+  }
+  .footer-item {
+    grid-column-start: 2;
+    grid-row-start: 3;
+  }
+</style>
+
 
 <div class="row">
   <!-- Configure the recommendation interface in the page markup -->
