@@ -4,6 +4,7 @@
     <div class="interface-container">
       <atomic-facet-manager>
         <atomic-facet field="author" label="Authors"></atomic-facet>
+        <atomic-facet field="source" label="Source"></atomic-facet>
       </atomic-facet-manager>
 
       <atomic-result-list fields-to-include="filetype">
@@ -20,7 +21,7 @@
               </a>
             </div>
             <div>
-              <atomic-result-value value="excerpt">{{excerpt}}</atomic-result-value>
+              <atomic-result-value field="excerpt">{{excerpt}}</atomic-result-value>
             </div>
             <div id="type">
               <atomic-result-value value="filetype">{{raw.filetype}}</atomic-result-value>
