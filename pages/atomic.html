@@ -15,25 +15,23 @@
                 color: blue;
               }
             </style>
-            <div id="title">
-              <a href="{{clickUri}}">
-                <h3>{{title}}</h3>
-              </a>
-            </div>
+            <atomic-result-printable-uri max-number-of-parts="3"></atomic-result-printable-uri>
             <div>
-              <atomic-result-value field="excerpt">{{excerpt}}</atomic-result-value>
+              <atomic-result-section-excerpt></atomic-result-section-excerpt>
+              <atomic-result-text field="excerpt"></atomic-result-text>
+              </atomic-result-section-excerpt>
             </div>
             <div id="type">
-              <atomic-result-value value="filetype">{{raw.filetype}}</atomic-result-value>
+              <atomic-result-value value="filetype"></atomic-result-value>
             </div>
           </template>
         </atomic-result-template>
       </atomic-result-list>
-    <div class="footer-item">
-      <atomic-pager></atomic-pager>
-      <atomic-results-per-page></atomic-results-per-page>
+      <div class="footer-item">
+        <atomic-pager></atomic-pager>
+        <atomic-results-per-page></atomic-results-per-page>
+      </div>
     </div>
-  </div>
   </atomic-search-interface>
 </div>
 
@@ -41,6 +39,7 @@
   atomic-facet-manager {
     padding-top: 13px;
   }
+
   atomic-result-list {
     display: block;
     margin-top: 10px;
@@ -56,9 +55,11 @@
     grid-template-columns: 25% 1fr;
     gap: 20px;
   }
+
   .search-box-item {
     grid-column-start: 2;
   }
+
   .footer-item {
     grid-column-start: 2;
     grid-row-start: 3;
